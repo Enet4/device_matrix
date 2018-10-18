@@ -55,10 +55,10 @@ SET(INCLUDE_DIRS
 foreach(INCLUDE_DIR ${INCLUDE_DIRS})
     set(CUDA_NVCC_FLAGS
         ${CUDA_NVCC_FLAGS};
-        -isystem ${INCLUDE_DIR})
+	-I ${INCLUDE_DIR})
 
     set(CMAKE_CXX_FLAGS
-        "${CMAKE_CXX_FLAGS} -isystem ${INCLUDE_DIR}")
+	    "${CMAKE_CXX_FLAGS} -I ${INCLUDE_DIR}")
 endforeach()
 
 enable_testing()
